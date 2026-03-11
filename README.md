@@ -14,24 +14,10 @@ The data source is the [Open-Meteo API](https://open-meteo.com) -- a fully free,
 
 ## Architecture
 
-```
-Open-Meteo API
-      |
-      v
- [extract.py]  -- HTTP GET per city, retry on failure
-      |
-      v
- [archive.py]  -- raw JSON → GCS (raw/{city}/{date}.json)
-      |
-      v
-[validate.py]  -- null checks, type checks, range checks
-      |
-      v
-  [load.py]    -- upsert into PostgreSQL (ON CONFLICT DO NOTHING)
-      |
-      v
-  PostgreSQL   -- cities / weather_daily / ingestion_runs
-```
+
+<img width="2528" height="994" alt="image" src="https://github.com/user-attachments/assets/68ad8e47-55e5-49df-8690-fe1dceae5510" />
+
+
 
 All four stages are orchestrated by `main.py`. Infrastructure (GCS bucket, IAM bindings) is managed by Terraform. PostgreSQL and the ingester run as Docker containers wired together with Docker Compose.
 
