@@ -15,7 +15,8 @@ The data source is the [Open-Meteo API](https://open-meteo.com) -- a fully free,
 ## Architecture
 
 
-<img width="2528" height="994" alt="image" src="https://github.com/user-attachments/assets/68ad8e47-55e5-49df-8690-fe1dceae5510" />
+<img width="1228" height="345" alt="image" src="https://github.com/user-attachments/assets/f2c45e94-80e1-4fd9-823d-f8738d8590f0" />
+
 
 
 
